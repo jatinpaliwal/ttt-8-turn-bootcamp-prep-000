@@ -34,4 +34,12 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
+  playersMove = gets.strip;
+  playersMove = input_to_index(playersMove)
+  if (!valid_move?(board, playersMove))
+    turn(board)
+  else
+    move(board,playersMove);
+    display_board(board)
+  end
 end
