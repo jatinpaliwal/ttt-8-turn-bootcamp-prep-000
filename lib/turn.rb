@@ -24,6 +24,18 @@ def position_taken?(board,position)
   end
 end
 
+def move (board, index, side = "X")
+
+   board[index] = side
+
+ end
+
+ def input_to_index (user_input)
+
+   return user_input.to_i - 1
+
+ end
+
 def turn(board)
   puts "Please enter 1-9:"
 end
